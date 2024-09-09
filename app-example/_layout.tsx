@@ -26,13 +26,11 @@ export default function RootLayout() {
     return null;
   }
 
-  const loggedIn = true;
-
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        {loggedIn && <Stack.Screen name="(tabs)" options={{ headerShown: false }} />}
-        {!loggedIn && <Stack.Screen name="(auth)" options={{ headerShown: false }} />}
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>
   );

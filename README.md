@@ -1,3 +1,31 @@
+# Olutkerho app 🍺
+
+No-limits, by the book.
+
+This is the official Olutkerho ry app🍺
+
+## Development
+
+### Pre-requisites
+
+Ask for `google-services.json` and `GoogleService-Info.plist` from your fellow Olutkerho app developer.
+
+1. Install dependencies
+
+   ```bash
+   npm install
+   ```
+
+2. Start the app
+
+   ```bash
+    npx expo start
+   ```
+
+
+
+### REMOVE THESE WHEN YOU ARE COMFORTABLE WITH THE FOLLOWING STUFF
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
