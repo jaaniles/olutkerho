@@ -1,11 +1,10 @@
-
-import View from '~/app/ui/view/View';
-import { ThemedText } from '~/components/ThemedText';
+import { Text } from "react-native";
+import View from "~/ui/view/View";
 
 export default function HomeScreen() {
   return (
     <View>
-      <ThemedText>Moikka martti</ThemedText>
+      <Text>Moikka martti</Text>
     </View>
   );
 }

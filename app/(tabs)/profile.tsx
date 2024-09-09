@@ -1,11 +1,11 @@
-import View from '~/app/ui/view/View';
+import View from "~/ui/view/View";
 
-import { ThemedText } from '~/components/ThemedText';
+import { Text } from "react-native";
 
 export default function ProfileScreen() {
   return (
     <View>
-      <ThemedText>Profile xD</ThemedText>
+      <Text>Profile xD</Text>
     </View>
   );
 }

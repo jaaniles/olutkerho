@@ -1,33 +1,35 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
-import { useColorScheme } from 'react-native';
-import { TabBarIcon } from '~/components/navigation/TabBarIcon';
-import { Colors } from '~/constants/Colors';
+import { Ionicons } from "@expo/vector-icons";
+import { Redirect, Tabs } from "expo-router";
+import React from "react";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
+  const loggedIn = true;
+
+  if (!loggedIn) {
+    return <Redirect href="/auth/login" />;
+  }
 
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: "Home",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            <Ionicons name={focused ? "home" : "home-outline"} color={color} />
           ),
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
-          title: 'Profile',
+          title: "Profile",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'cog' : 'cog-outline'} color={color} />
+            <Ionicons name={focused ? "cog" : "cog-outline"} color={color} />
           ),
         }}
       />
