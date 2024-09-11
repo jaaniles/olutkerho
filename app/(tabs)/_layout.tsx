@@ -1,11 +1,10 @@
 import { Ionicons } from "@expo/vector-icons";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { Redirect, Tabs } from "expo-router";
 import React from "react";
 
 export default function TabLayout() {
-  const loggedIn = true;
-
-  if (!loggedIn) {
+  if (!GoogleSignin.getCurrentUser()) {
     return <Redirect href="/auth/login" />;
   }
 

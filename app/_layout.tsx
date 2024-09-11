@@ -3,10 +3,12 @@ import { useFonts } from "expo-font";
 import { Stack as RouteStack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import "react-native-reanimated";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
+GoogleSignin.configure();
 
 export default function RootLayout() {
   const [loaded] = useFonts({
