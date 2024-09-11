@@ -1,16 +1,16 @@
-import { Stack } from "expo-router";
+import { Stack as RouteStack } from "expo-router";
 import React from "react";
 
 export default function TabLayout() {
   return (
-    <Stack
+    <RouteStack
       screenOptions={{
         headerShown: false,
       }}
     >
-      <Stack.Screen name="login" />
-      <Stack.Screen name="register" />
-      <Stack.Screen name="forgot-password" />
-    </Stack>
+      <RouteStack.Screen name="login" />
+      <RouteStack.Screen name="register" />
+      <RouteStack.Screen name="forgot-password" />
+    </RouteStack>
   );
 }
