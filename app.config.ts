@@ -4,10 +4,12 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   slug: "olutkerho",
   name: "Olutkerho",
+  scheme: "org.olutkerho.app://",
   android: {
-    googleServicesFile: process.env.GOOGLE_SERVICES_JSON,
+    package: "org.olutkerho.app",
+    googleServicesFile: "./google-services.json",
   },
   ios: {
-    googleServicesFile: process.env.GOOGLE_SERVICE_INFO,
+    googleServicesFile: "./GoogleService-Info.plist",
   },
 });
